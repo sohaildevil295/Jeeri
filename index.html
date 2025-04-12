@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocialSpace Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div id="auth-section">
+    <h2>Login / Register</h2>
+    <input id="email" placeholder="Email"><br>
+    <input id="password" type="password" placeholder="Password"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+
+  <div id="chat-section" style="display:none;">
+    <h2>Welcome <span id="user-email"></span> | <button onclick="logout()">Logout</button></h2>
+    <div>
+      <select id="chatTarget">
+        <option value="group">Group Chat</option>
+      </select>
+    </div>
+    <div id="messages"></div>
+    <input id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
